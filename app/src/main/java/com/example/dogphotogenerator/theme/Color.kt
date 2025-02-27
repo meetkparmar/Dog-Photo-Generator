@@ -1,4 +1,4 @@
-package com.example.dogphotogenerator.ui.theme
+package com.example.dogphotogenerator.theme
 
 import androidx.compose.ui.graphics.Color
 
