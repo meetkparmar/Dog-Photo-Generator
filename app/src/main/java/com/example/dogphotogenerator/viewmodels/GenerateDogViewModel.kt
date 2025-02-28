@@ -12,11 +12,16 @@ class GenerateDogViewModel(private val repository: DogRepository) : ViewModel() 
     private val _dogUrl = MutableStateFlow("")
     val dogUrl: StateFlow<String> = _dogUrl
 
+    private val _showLoading = MutableStateFlow(false)
+    val showLoading: StateFlow<Boolean> = _showLoading
+
     fun generateDog() {
         viewModelScope.launch {
+            _showLoading.value = true
             val response = repository.fetchRandomDog()
             repository.addDogToCache(response)
             _dogUrl.value = response
+            _showLoading.value = false
         }
     }
 }

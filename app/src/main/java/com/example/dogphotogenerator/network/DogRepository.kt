@@ -23,7 +23,8 @@ class DogRepository(private val context: Context) {
     }
 
     suspend fun fetchRandomDog(): String {
-        return api.getRandomDog().message
+        val response = api.getRandomDog()
+        return response.message
     }
 
     fun addDogToCache(url: String) {

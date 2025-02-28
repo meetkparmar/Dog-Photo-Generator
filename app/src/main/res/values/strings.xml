@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dog Photo Generator</string>
+    <string name="home_title">Home</string>
+    <string name="generate_dogs_title">Generate Dogs</string>
+    <string name="my_recently_generated_dogs_title">My Recently Generated Dogs</string>
+    <string name="generate">Generate!</string>
+    <string name="clear_dogs">Clear Dogs</string>
 </resources>
